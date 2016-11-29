@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 #index .header a{position:absolute;right: 1%;top:1.5%;display: block;font-size: 13px;font-weight: bold;color:#000000;}
 #index .pfixed{position:fixed;left:0;top:0;}
 #index .tabt{position:relative;}
-#index .tabt a{width:32%;height:50px;display:block;position:absolute;top:20%;}
+#index .tabt a{width:32%;height:100%;display:block;position:absolute;top:0;}
 #index .tabt #apic{left:1%;}
 #index .tabt #bpic{left:50%;margin-left:-16%;}
 #index .tabt #cpic{right:1%;}
