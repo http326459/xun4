@@ -14,9 +14,9 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 #index .pfixed{position:fixed;left:0;top:0;}
 #index .tabt{position:relative;}
 #index .tabt a{width:32%;height:50px;display:block;position:absolute;top:20%;}
-#index #apic{left:1%;}
-#index #bpic{left:50%;margin-left:-16%;}
-#index #cpic{right:1%;}
+#index .tabt #apic{left:1%;}
+#index .tabt #bpic{left:50%;margin-left:-16%;}
+#index .tabt #cpic{right:1%;}
 /*200*/
 #index .four{position:relative;}
 #index .four .infour{position:absolute;left:20%;top:14%;margin-right:8%;}
