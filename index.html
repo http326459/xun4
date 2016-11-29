@@ -14,18 +14,18 @@
    			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
    			
    		});
-   		$(function(){
+   		/*$(function(){
    			$("#apic").click(function(){
-				$(window)..scrollTop(530);
-   				$(".tab").css({"position":"fixed","left":0,"top":0});
+   				$(window).scrollTop(530);
+   				$(".tab").css("position","relative");
+   				$(".tab").addClass("pfixed");
+   				
 	   			$(".tab img").attr("src","images/a.png");
 	   		});
 	   		$("#bpic").click(function(){
-	   			$(".tab").css({"position":"fixed","left":0,"top":0});
 	   			$(".tab img").attr("src","images/b.png");
 	   		});
 	   		$("#cpic").click(function(){
-	   			$(".tab").css({"position":"fixed","left":0,"top":0});
 	   			$(".tab img").attr("src","images/c.png");
 	   		});
 	   		var tabHeight = $(".tab").height();
@@ -36,7 +36,7 @@
 			        atop = $(".one").offset().top;
 							btop = $(".two").offset().top;
 							ctop = $(".three").offset().top;
-							//console.log(btop);
+							console.log(atop);
 				      if(wortop < atop){
 		   					$(".tab").css({"position":"relative","left":0,"top":0});
 		   					$(".tab img").attr("src","images/head_02.jpg");
@@ -53,16 +53,47 @@
 		   				}
 				    });
 				});
+   		});*/
+   		$(function(){
+   			var atop=0;
+   			$(document).ready(function () { 
+				    $(window).scroll(function () {
+				    	var tabHeight = $(".tab").height();
+			        var wortop = $(window).scrollTop();
+			        atop = $(".one").offset().top;
+							btop = $(".two").offset().top;
+							ctop = $(".three").offset().top;
+				      if(wortop < atop){
+		   					$(".tab").removeClass("pfixed");
+		   					$(".tabt img").attr("src","images/navbai.jpg");
+		   				}else if(wortop > atop){
+		   					
+		   					$(".tab").addClass("pfixed");
+		   					$(".tabt img").attr("src","images/sheepb.png");
+			   					if(wortop > btop-tabHeight){
+			   						$(".tabt img").attr("src","images/sh.png");
+					   					if(wortop > ctop-tabHeight){
+					   						$(".tabt img").attr("src","images/sheepd.png");
+						   				}
+			   					}
+		   				}
+				    });
+				});
+				//console.log(atop);
+				$("#apic").click(function(){
+					$(".tab").addClass("pfixed");
+					$(".tabt img").attr("src","images/sheepb.png");
+					$(window).scrollTop(530);
+					
+				});
+				$("#bpic").click(function(){
+					$(".tabt img").attr("src","images/sh.png");
+					
+				});
+				$("#cpic").click(function(){
+					$(".tabt img").attr("src","images/sheepd.png");
+				});
    		});
-   		$(document).ready(function(){  
-			    $(".tab").each(function(){  
-			        $this = $(this);  
-			        if($this[0].href==String(window.location)){  
-			            $this.css({"position":"fixed","left":0,"top":0});
-			        }  
-			    });  
-			});  
-   		
     </script>
 </head>
 <body>
@@ -70,10 +101,14 @@
 		<div class="header"><img src="images/top_01.jpg"/>
 			<a href="#">分享</a>
 		</div>
-		<div class="tab"><img src="images/head_02.jpg"/>
-			<a href="javascript:;" id="apic"></a>
-			<a href="#bac" id="bpic"></a>
-			<a href="#cba" id="cpic"></a>
+		<div class="tab">
+			<div class="tabt clearfix">
+				<img src="images/head_02.jpg"/>
+				<a href="javascript:;" id="apic"></a>
+				<a href="#bac" id="bpic"></a>
+				<a href="#cba" id="cpic"></a>
+			</div>
+			
 				<!--	<div class="first"><a href=""><img src="images/a.png"/></a></div>
 			
 				<div class="second"><a href=""><img src="images/b.png"/></a></div>
@@ -81,7 +116,6 @@
 				-->
 		</div>
 		<div class="one">
-			<a name="abc" id="abc"></a>
 				<div class="onetab"><img src="images/qujain_02.jpg"/>
 						<ul>
 								<li><a href="www.baidu.com"><img src="images/xwfour_03.jpg"/></a></li>
