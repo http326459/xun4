@@ -1,0 +1,28 @@
+/*ss重置样式  */
+body,div,i,a,p,span,b,input,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dd,dt,textarea,img{margin:0;padding:0;}
+body{font-family: microsoft yahei;color:#333;}
+i,b{font-style: normal;}
+a{text-decoration:none;}
+img{vertical-align:top;width: 100%;}
+input,textarea,select,textarea,img,a{resize: none;outline: none;border: none;}
+li{list-style: none}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.clearfix:after{content: '';display: block;height:0;clear: both;font-size:0;*zoom:1}
+
+#index .header{position: relative;}
+#index .header a{position:absolute;right: 1%;top:1.5%;display: block;font-size: 13px;font-weight: bold;color:#000000;}
+#index .tab{position:relative;}
+#index .tba{position:fixed;left:0;top:0;}
+#index .tab a{width:32%;height:50px;display:block;position:absolute;top:20%;}
+#index .tab #apic{left:1%;}
+#index .tab #bpic{left:50%;margin-left:-16%;}
+#index .tab #cpic{right:1%;}
+/*100*/
+#index .one{}
+#index .one .onetab{}
+#index .one .onetab ul{}
+/*100-200*/
+
+/*200*/
+#index .four{position:relative;}
+#index .four .infour{position:absolute;left:20%;top:14%;margin-right:8%;}
