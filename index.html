@@ -14,46 +14,6 @@
    			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
    			
    		});
-   		/*$(function(){
-   			$("#apic").click(function(){
-   				$(window).scrollTop(530);
-   				$(".tab").css("position","relative");
-   				$(".tab").addClass("pfixed");
-   				
-	   			$(".tab img").attr("src","images/a.png");
-	   		});
-	   		$("#bpic").click(function(){
-	   			$(".tab img").attr("src","images/b.png");
-	   		});
-	   		$("#cpic").click(function(){
-	   			$(".tab img").attr("src","images/c.png");
-	   		});
-	   		var tabHeight = $(".tab").height();
-	   		console.log(tabHeight);
-	   		$(document).ready(function () { 
-				    $(window).scroll(function () {
-			        var wortop = $(window).scrollTop();
-			        atop = $(".one").offset().top;
-							btop = $(".two").offset().top;
-							ctop = $(".three").offset().top;
-							console.log(atop);
-				      if(wortop < atop){
-		   					$(".tab").css({"position":"relative","left":0,"top":0});
-		   					$(".tab img").attr("src","images/head_02.jpg");
-		   				}else if(wortop > atop){
-		   					
-		   						$(".tab").css({"position":"fixed","left":0,"top":0});
-		   						$(".tab img").attr("src","images/a.png");
-			   					if(wortop > btop-tabHeight){
-			   						$(".tab img").attr("src","images/b.png");
-					   					if(wortop > ctop-tabHeight){
-					   						$(".tab img").attr("src","images/c.png");
-						   				}
-			   					}
-		   				}
-				    });
-				});
-   		});*/
    		$(function(){
    			var atop=0;
    			$(document).ready(function () { 
